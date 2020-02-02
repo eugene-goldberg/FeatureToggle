@@ -15,7 +15,7 @@
     </mat-form-field>
   </div>
 
-  <mat-table #table [dataSource]="dataSource" matSort class="mat-cell">
+  <mat-table #table [dataSource]="myDs" matSort class="mat-cell">
 
     <!--- Las columnas pueden ser definidas en cualquier orden.
           El contenido de la columna se asigna como una propiedad de row (linea) -->
@@ -28,7 +28,7 @@
 
     <ng-container matColumnDef="title">
       <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
-      <mat-cell *matCellDef="let row"> {{row.title}}</mat-cell>
+      <mat-cell *matCellDef="let row"> {{row.name}}</mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="state">

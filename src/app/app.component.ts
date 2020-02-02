@@ -51,8 +51,8 @@ export class AppComponent implements OnInit {
   // this.loadData();
     this.dataService.getTest().subscribe(
          data => {
-           const ds = data.content[0] as string [];
-        this.myDs = data.content[0] as string [];	 // FILL THE ARRAY WITH DATA.
+           const ds = data.content as string [];
+        this.myDs = data.content as string [];	 // FILL THE ARRAY WITH DATA.
          console.log(ds);
       },
       (err: HttpErrorResponse) => {
